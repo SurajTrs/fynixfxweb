@@ -56,9 +56,7 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
           { label: "TradingView", href: "/platforms/tradingview", badge: "NEW" },
           { label: "cTrader", href: "/platforms/ctrader" },
           { label: "WebTrader", href: "/platforms/webtrader" },
-          { label: "IC Social", href: "/platforms/social" },
-          { label: "Signal Start", href: "/platforms/signal-start" },
-          { label: "ZuluTrade", href: "/platforms/zulutrade" },
+          
         ],
       },
     ],
@@ -77,7 +75,6 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
           { label: "Raw Spread", href: "/accounts/raw-spread" },
           { label: "cTrader Raw Spread", href: "/accounts/ctrader-raw" },
           { label: "Standard", href: "/accounts/standard" },
-          { label: "Islamic", href: "/accounts/islamic" },
           { label: "How to deposit", href: "/help/deposit" },
           { label: "How to withdraw", href: "/help/withdraw" },
         ],
@@ -116,12 +113,10 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
       {
         heading: "MetaTrader 5 & 4",
         items: [
-          { label: "MetaTrader 5", href: "/platforms/mt5", badge: "RECOMMENDED" },
-          { label: "MetaTrader 4", href: "/platforms/mt4" },
+          { label: "MetaTrader 5", href: "/platforms/metatrader-5", badge: "RECOMMENDED" },
+          { label: "MetaTrader 4", href: "/platforms/metatrader" },
           { label: "MetaTrader WebTrader", href: "/platforms/mt-web" },
-          { label: "MetaTrader iPhone/iPad", href: "/platforms/mt-ios" },
-          { label: "MetaTrader Android", href: "/platforms/mt-android" },
-          { label: "MetaTrader Mac", href: "/platforms/mt-mac" },
+          
         ],
       },
       {
