@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StickyDisclaimer from "@/components/StickyDisclaimer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "IC Markets Global — Demo",
@@ -15,9 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className="antialiased font-sans pop-on-hover">
+      <body suppressHydrationWarning className="antialiased font-sans pop-on-hover min-h-screen flex flex-col">
         <Navbar />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
         <StickyDisclaimer />
       </body>
     </html>
