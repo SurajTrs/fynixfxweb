@@ -26,7 +26,6 @@ export default function Home() {
      <AutomatedEdge />
      <PaymentsAndSteps />
      <MobileAppPromo />
-     <Footer />
     </main>
   );
 }
