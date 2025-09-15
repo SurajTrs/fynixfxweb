@@ -17,15 +17,16 @@ export default function MT5Downloads() {
           <a href="#" className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition-all">
             <div className="text-sm font-semibold text-black">Android</div>
             <p className="mt-1 text-sm text-neutral-700">Get it on Google Play</p>
-            <div className="mt-3"><Image src="/googleplay.png" alt="Google Play" width={140} height={42} className="h-10 w-auto"/></div>
+            <div className="mt-3"><Image src="/GooglePlay.png" alt="Google Play" width={140} height={42} className="h-10 w-auto"/></div>
           </a>
           <a href="#" className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition-all">
             <div className="text-sm font-semibold text-black">iOS</div>
             <p className="mt-1 text-sm text-neutral-700">Download on the App Store</p>
-            <div className="mt-3"><Image src="/appstore.png" alt="App Store" width={140} height={42} className="h-10 w-auto"/></div>
+            <div className="mt-3"><Image src="/Ios.png" alt="App Store" width={140} height={42} className="h-10 w-auto"/></div>
           </a>
         </div>
       </div>
     </section>
   );
 }
+

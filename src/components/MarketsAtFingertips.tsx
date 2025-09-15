@@ -42,7 +42,7 @@ export default function MarketsAtFingertips() {
               <FeatureItem title="Cryptocurrency CFD" subtitle="—" />
             </div>
             <div className="mt-6">
-              <Link href="#" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-base shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
+              <Link href="/products" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-base shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
                 Explore Markets
               </Link>
             </div>

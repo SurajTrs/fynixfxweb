@@ -16,7 +16,7 @@ export default function FundingOverview() {
         <div className="grid lg:grid-cols-3 gap-6 items-stretch">
           <div className="lg:col-span-2 rounded-2xl border border-neutral-200 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-black">Account Funding</h2>
-            <p className="mt-3 text-[15px] leading-7 text-neutral-700">IC Markets Global offers over 15 flexible funding options in 10 different base currencies. Deposit instantly and for free using a range of methods.</p>
+            <p className="mt-3 text-[15px] leading-7 text-neutral-700">Fynixfx offers over 15 flexible funding options in 10 different base currencies. Deposit instantly and for free using a range of methods.</p>
             <ul className="mt-5 grid sm:grid-cols-2 gap-3 text-sm text-neutral-800">
               {bullets.map((b) => (
                 <li key={b} className="flex items-start gap-2"><FiCheckCircle className="mt-[2px] text-[color:var(--brand)]" /> {b}</li>

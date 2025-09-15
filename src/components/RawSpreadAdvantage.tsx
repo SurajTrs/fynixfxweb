@@ -47,8 +47,8 @@ export default function RawSpreadAdvantage() {
             Raw Spreads are the difference you have been waiting for. Trade with spreads from 0.0 pips, no requotes, best possible prices and no restrictions. Fynixfx is the multi-asset trading platform of choice for high volume traders, scalpers and robots.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="#" className="inline-flex items-center justify-center rounded-md bg-brand text-black font-semibold px-6 py-3 shadow-[0_0_24px_rgba(var(--brand-rgb),0.5)] hover:brightness-110 transition-colors">Start Trading</Link>
-            <Link href="#" className="inline-flex items-center justify-center rounded-md border border-accent text-accent font-semibold px-6 py-3 hover:bg-accent hover:text-black transition-colors">Try a Free Demo</Link>
+            <Link href="/start-trading?mode=live" className="inline-flex items-center justify-center rounded-md bg-brand text-black font-semibold px-6 py-3 shadow-[0_0_24px_rgba(var(--brand-rgb),0.5)] hover:brightness-110 transition-colors">Start Trading</Link>
+            <Link href="/start-trading?mode=demo" className="inline-flex items-center justify-center rounded-md border border-accent text-accent font-semibold px-6 py-3 hover:bg-accent hover:text-black transition-colors">Try a Free Demo</Link>
           </div>
         </div>
       </div>

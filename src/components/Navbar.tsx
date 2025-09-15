@@ -38,13 +38,13 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 h-full">
+        <Link href="/" className="flex items-center gap-3 h-full" onMouseEnter={() => setOpenKey(null)}>
           <Image src="/logo.png" alt="Fynixfx" width={80} height={80} className="h-full w-auto" priority />
           <span className="sr-only">Fynixfx</span>
         </Link>
 
         {/* Desktop nav with mega dropdowns */}
-        <nav className="hidden md:flex items-center gap-8 lg:gap-10 text-base md:text-lg text-black/70 relative">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10 text-base md:text-lg text-black/70 relative" onMouseLeave={scheduleClose} onMouseEnter={cancelClose}>
           {keys.map((key) => (
             <div
               key={key}
@@ -74,7 +74,7 @@ export default function Navbar() {
 
         {/* CTAs + mobile toggle */}
         <div className="flex items-center gap-3">
-          <Link href="#" className="hidden lg:inline-flex px-4 py-2 rounded-md border border-brand text-brand hover:bg-brand hover:text-black transition-colors">Client Login</Link>
+          <Link href="/login" className="hidden lg:inline-flex px-4 py-2 rounded-md border border-brand text-brand hover:bg-brand hover:text-black transition-colors">Client Login</Link>
           <Link href="/open-account" className="hidden sm:inline-flex px-4 py-2 rounded-md bg-gradient-to-r from-brand to-accent text-black font-medium shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition-colors">Open Account</Link>
           <button onClick={() => setMobileOpen((s) => !s)} aria-label="Toggle menu" className="inline-flex md:hidden px-3 py-2 rounded-md border border-black/10 text-black/70">Menu</button>
         </div>
@@ -127,7 +127,7 @@ export default function Navbar() {
               </details>
             ))}
             <div className="flex items-center gap-3 pt-2">
-              <Link href="#" className="flex-1 px-4 py-2 rounded-md border border-brand text-brand text-center">Client Login</Link>
+              <Link href="/login" className="flex-1 px-4 py-2 rounded-md border border-brand text-brand text-center">Client Login</Link>
               <Link href="/open-account" className="flex-1 px-4 py-2 rounded-md bg-gradient-to-r from-brand to-accent text-black font-medium text-center">Open Account</Link>
             </div>
           </div>

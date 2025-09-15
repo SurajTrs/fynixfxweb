@@ -1,7 +1,16 @@
-import { FaXTwitter, FaYoutube, FaFacebook } from "react-icons/fa6";
+import Link from "next/link";
+import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 import { FiChevronRight } from "react-icons/fi";
+import { MEGA_MENU } from "@/data/menu";
 
 export default function Footer() {
+  // Build footer sections from MEGA_MENU
+  const tradingAccounts = MEGA_MENU["Trading"].columns.find((c) => c.heading === "Trading Accounts");
+  const products = MEGA_MENU["Trading"].columns.find((c) => c.heading === "Products");
+  const platforms = MEGA_MENU["Platforms"].columns.flatMap((c) => c.items);
+  const help = MEGA_MENU["More"].columns.find((c) => c.heading === "Help & Resources");
+  const company = MEGA_MENU["More"].columns.find((c) => c.heading === "Company");
+
   return (
     <footer className="bg-black text-white border-t border-white/10 rounded-t-[60px] md:rounded-t-[70px] overflow-hidden">
       {/* CTA band with background video + gradients (hero-like) */}
@@ -26,12 +35,12 @@ export default function Footer() {
             <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">Instant account opening & funding</h2>
             <p className="mt-3 text-base sm:text-lg text-white/85">Trade within minutes!</p>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-              <a href="/open-account" className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_28px_rgba(var(--brand-rgb),0.45)] hover:brightness-110 transition">
+              <Link href="/start-trading?mode=live" className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_28px_rgba(var(--brand-rgb),0.45)] hover:brightness-110 transition">
                 Get Started
-              </a>
-              <a href="/demo" className="inline-flex items-center justify-center gap-2 rounded-md border border-brand/70 text-white font-semibold px-7 py-3.5 text-lg hover:bg-brand/10 transition">
+              </Link>
+              <Link href="/start-trading?mode=demo" className="inline-flex items-center justify-center gap-2 rounded-md border border-brand/70 text-white font-semibold px-7 py-3.5 text-lg hover:bg-brand/10 transition">
                 Try a Free Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -39,7 +48,7 @@ export default function Footer() {
 
       {/* Link columns */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-4 gap-10">
+        <div className="grid lg:grid-cols-6 gap-10">
           {/* About / brand column */}
           <div>
             <div className="text-2xl font-extrabold"><span className="text-white">Fynix</span><span className="text-brand">fx</span></div>
@@ -49,116 +58,88 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex items-center gap-3 text-white/80">
               <a href="#" aria-label="X" className="hover:text-brand"><FaXTwitter className="h-5 w-5" /></a>
-              <a href="#" aria-label="YouTube" className="hover:text-brand"><FaYoutube className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/fynixfx" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-brand"><FaInstagram className="h-5 w-5" /></a>
               <a href="#" aria-label="Facebook" className="hover:text-brand"><FaFacebook className="h-5 w-5" /></a>
             </div>
           </div>
 
-          {/* Column 2 */}
+          {/* Trading Accounts */}
           <div>
-            <div className="font-extrabold text-white text-lg">Forex Trading</div>
+            <div className="font-extrabold text-white text-lg">Trading Accounts</div>
             <div className="h-0.5 w-12 bg-brand/70 rounded mt-1.5 mb-3" />
             <ul className="space-y-2.5 text-white/80 text-sm">
-              <li>
-                <a href="/accounts" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Accounts Overview</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/open-account" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Open an Account</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/webtrader" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Launch Web Trader</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/security" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Cybersecurity and Scams</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
+              {(tradingAccounts?.items || []).map((it) => (
+                <li key={it.href}>
+                  <Link href={it.href} className="group inline-flex items-center gap-2 hover:text-brand transition">
+                    <span>{it.label}</span>
+                    <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Products */}
           <div>
-            <div className="font-extrabold text-white text-lg">Trading Specifications</div>
+            <div className="font-extrabold text-white text-lg">Products</div>
             <div className="h-0.5 w-12 bg-brand/70 rounded mt-1.5 mb-3" />
             <ul className="space-y-2.5 text-white/80 text-sm">
-              <li>
-                <a href="/pricing" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Spreads and Commissions</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/products" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Range of Products</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/hours" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Trading Hours</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/funding" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Funding</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/withdrawal" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Withdrawal</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
+              {(products?.items || []).map((it) => (
+                <li key={it.href}>
+                  <Link href={it.href} className="group inline-flex items-center gap-2 hover:text-brand transition">
+                    <span>{it.label}</span>
+                    <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 4 */}
+          {/* Platforms */}
           <div>
-            <div className="font-extrabold text-white text-lg">About Fynixfx</div>
+            <div className="font-extrabold text-white text-lg">Platforms</div>
             <div className="h-0.5 w-12 bg-brand/70 rounded mt-1.5 mb-3" />
             <ul className="space-y-2.5 text-white/80 text-sm">
-              <li>
-                <a href="/help" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Help Centre</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/why-us" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Why Fynixfx</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/regulation" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Regulation</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/legal" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Legal Documents</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="group inline-flex items-center gap-2 hover:text-brand transition">
-                  <span>Contact Us</span>
-                  <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
-                </a>
-              </li>
+              {platforms.map((it) => (
+                <li key={it.href}>
+                  <Link href={it.href} className="group inline-flex items-center gap-2 hover:text-brand transition">
+                    <span>{it.label}</span>
+                    <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Help & Resources */}
+          <div>
+            <div className="font-extrabold text-white text-lg">Help & Resources</div>
+            <div className="h-0.5 w-12 bg-brand/70 rounded mt-1.5 mb-3" />
+            <ul className="space-y-2.5 text-white/80 text-sm">
+              {(help?.items || []).map((it) => (
+                <li key={it.href}>
+                  <Link href={it.href} className="group inline-flex items-center gap-2 hover:text-brand transition">
+                    <span>{it.label}</span>
+                    <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <div className="font-extrabold text-white text-lg">Company</div>
+            <div className="h-0.5 w-12 bg-brand/70 rounded mt-1.5 mb-3" />
+            <ul className="space-y-2.5 text-white/80 text-sm">
+              {(company?.items || []).map((it) => (
+                <li key={it.href}>
+                  <Link href={it.href} className="group inline-flex items-center gap-2 hover:text-brand transition">
+                    <span>{it.label}</span>
+                    <FiChevronRight className="h-4 w-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -180,7 +161,7 @@ export default function Footer() {
           </p>
           <p>
             By using this website, you acknowledge you are registering at your own free will and have read and agreed
-            to our <a href="/risk-disclosure" className="text-brand hover:underline">Risk Disclosure</a>.
+            to our <Link href="/risk-disclosure" className="text-brand hover:underline">Risk Disclosure</Link>.
           </p>
           <p className="text-white/60">© {new Date().getFullYear()} Fynixfx. All rights reserved.</p>
         </div>

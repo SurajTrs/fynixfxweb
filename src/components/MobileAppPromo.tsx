@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SiAppstore, SiGoogleplay } from "react-icons/si";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -24,13 +23,11 @@ export default function MobileAppPromo() {
               <Pill>Multiple payment methods</Pill>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#" className="inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 ring-1 ring-white/15 hover:bg-white/15 transition">
-                <SiAppstore className="h-5 w-5" />
-                <span className="text-sm font-semibold">Download on the App Store</span>
+              <a href="/apps/mobile#ios" className="inline-flex items-center rounded-md bg-white/10 px-3 py-2 ring-1 ring-white/15 hover:bg-white/15 transition" aria-label="Download on the App Store">
+                <Image src="/Ios.png" alt="Download on the App Store" width={150} height={46} className="h-10 w-auto" />
               </a>
-              <a href="#" className="inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 ring-1 ring-white/15 hover:bg-white/15 transition">
-                <SiGoogleplay className="h-5 w-5" />
-                <span className="text-sm font-semibold">Get it on Google Play</span>
+              <a href="/apps/mobile#android" className="inline-flex items-center rounded-md bg-white/10 px-3 py-2 ring-1 ring-white/15 hover:bg-white/15 transition" aria-label="Get it on Google Play">
+                <Image src="/GooglePlay.png" alt="Get it on Google Play" width={150} height={46} className="h-10 w-auto" />
               </a>
             </div>
           </div>
@@ -46,7 +43,7 @@ export default function MobileAppPromo() {
             Skill up with weekly Fynixfx Global WEBINARS
           </div>
           <div className="mt-3 md:mt-0 text-center md:text-right">
-            <a href="#" className="inline-flex items-center justify-center rounded-md border border-brand text-white px-6 py-2.5 font-semibold hover:bg-brand/10 transition">
+            <a href="/education/tutorials" className="inline-flex items-center justify-center rounded-md border border-brand text-white px-6 py-2.5 font-semibold hover:bg-brand/10 transition">
               Upcoming Webinars
             </a>
           </div>

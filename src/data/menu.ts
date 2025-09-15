@@ -32,7 +32,7 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
       {
         heading: "Introduction",
         items: [
-          { label: "Why IC Markets Global", href: "/why" },
+          { label: "Why Fynixfx", href: "/why" },
           { label: "What you can trade", href: "/products" },
           { label: "Simple Pricing", href: "/pricing" },
           { label: "Forex Trading", href: "/forex" },
@@ -46,7 +46,7 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
           { label: "Demo Accounts", href: "/accounts/demo" },
           { label: "How to deposit", href: "/help/deposit" },
           { label: "How to withdraw", href: "/help/withdraw" },
-          { label: "IC Markets Global Mobile App", href: "/apps/mobile" },
+          { label: "Fynixfx Mobile App", href: "/apps/mobile" },
         ],
       },
       {
@@ -71,9 +71,8 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
       {
         heading: "Trading Accounts",
         items: [
-          { label: "Accounts Overview", href: "/accounts" },
+          { label: "Accounts Overview", href: "/accounts/accounts" },
           { label: "Raw Spread", href: "/accounts/raw-spread" },
-          { label: "cTrader Raw Spread", href: "/accounts/ctrader-raw" },
           { label: "Standard", href: "/accounts/standard" },
           { label: "How to deposit", href: "/help/deposit" },
           { label: "How to withdraw", href: "/help/withdraw" },
@@ -97,8 +96,7 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
         items: [
           { label: "Trading Conditions", href: "/pricing/conditions" },
           { label: "Spreads", href: "/pricing/spreads" },
-          { label: "Trading Hours", href: "/pricing/hours" },
-          { label: "Swap Rates", href: "/pricing/swaps" },
+          
         ],
       },
     ],
@@ -135,8 +133,8 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
       {
         heading: "Company",
         items: [
-          { label: "About IC Markets Global", href: "/company/about" },
-          { label: "Why IC Markets Global", href: "/company/why" },
+          { label: "About Fynixfx", href: "/company/about" },
+          { label: "Why Fynixfx", href: "/why" },
           { label: "Contact Us", href: "/company/contact" },
         ],
       },
@@ -146,7 +144,6 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
           { label: "Education Overview", href: "/education" },
           { label: "Advantages of Forex", href: "/education/forex" },
           { label: "Advantages of CFDs", href: "/education/cfds" },
-          { label: "Webinar", href: "/education/webinar" },
           { label: "Podcast", href: "/education/podcast", badge: "NEW" },
           { label: "Getting Started Tutorial Videos", href: "/education/tutorials" },
         ],
@@ -158,7 +155,6 @@ export const MEGA_MENU: Record<string, MenuConfig> = {
           { label: "Forex Calculators", href: "/tools/calculators" },
           { label: "Economic Calendar", href: "/tools/calendar" },
           { label: "Forex Glossary", href: "/tools/glossary" },
-          { label: "TeamViewer", href: "/tools/teamviewer" },
           { label: "Cybersecurity and Scams", href: "/security/scams" },
         ],
       },

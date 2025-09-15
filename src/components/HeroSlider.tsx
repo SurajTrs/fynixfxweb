@@ -36,13 +36,13 @@ const SLIDES: Slide[] = [
   },
   {
     id: 1,
-    eyebrow: "Produced in partnership with",
-    badgeLabel: "Bloomberg Media Studios",
-    titleTop: "ICY Your",
-    titleBottom: "Trade 5",
+    eyebrow: "Learn • Improve • Trade",
+    badgeLabel: "Fynixfx Academy",
+    titleTop: "Master Your",
+    titleBottom: "Edge with Fynixfx",
     description:
-      "Explore the latest season of ICYT with leading experts.",
-    cta: "Watch Now",
+      "Bite‑size tutorials, platform guides and market insights to level up your process.",
+    cta: "Explore Academy",
     video: "/videobg2.mp4",
     titleStyle: "accent",
     bgFrom: "from-[#001a24]",
@@ -185,13 +185,13 @@ export default function HeroSlider() {
 
         <div className="mt-8 inline-flex items-center justify-center gap-3 rounded-xl bg-black/30 backdrop-blur-sm ring-1 ring-white/10 px-4 py-3 animate-fade-up">
           <Link
-            href="#"
+            href="/start-trading?mode=live"
             className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-6 py-3 shadow-[0_0_30px_rgba(var(--brand-rgb),0.6)] hover:brightness-110 transition-colors"
           >
             {active.cta}
           </Link>
           <Link
-            href="#"
+            href="/start-trading?mode=demo"
             className="inline-flex items-center justify-center rounded-md border border-accent text-accent font-semibold px-6 py-3 hover:bg-accent hover:text-black transition-colors"
           >
             Try a Free Demo

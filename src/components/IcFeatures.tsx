@@ -58,7 +58,7 @@ export default function IcFeatures() {
                 <CheckItem>Our diverse and proprietary liquidity mix keeps spreads tight 24/5</CheckItem>
               </ul>
               <div className="mt-6">
-                <Link href="#" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
+                <Link href="/pricing" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
                   Pricing Overview
                 </Link>
               </div>
@@ -80,7 +80,7 @@ export default function IcFeatures() {
               <CheckItem>Free Low latency collocated VPS available</CheckItem>
             </ul>
             <div className="mt-6">
-              <Link href="#" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
+              <Link href="/support/livechat" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
                 Get your Free VPS
               </Link>
             </div>
@@ -94,7 +94,7 @@ export default function IcFeatures() {
               <CheckItem>Over 29 Billion USD in FX trades processed daily</CheckItem>
             </ul>
             <div className="mt-6">
-              <Link href="#" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
+              <Link href="/pricing#raw" className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-brand to-accent text-black font-semibold px-7 py-3.5 text-lg shadow-[0_0_20px_rgba(var(--brand-rgb),0.35)] hover:brightness-110 transition">
                 Raw Pricing Benefits
               </Link>
             </div>

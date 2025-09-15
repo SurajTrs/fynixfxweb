@@ -5,7 +5,7 @@ import StickyDisclaimer from "@/components/StickyDisclaimer";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "IC Markets Global — Demo",
+  title: "Fynixfx — Multi‑Asset Trading",
   description: "Landing page demo built with Next.js, TypeScript and Tailwind CSS",
 };
 
