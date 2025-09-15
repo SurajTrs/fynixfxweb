@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import StartTradingClient from "./StartTradingClient";
 
 export const metadata: Metadata = {
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
 export default function StartTradingPage() {
   return (
     <main>
-      <StartTradingClient />
+      <Suspense fallback={<div className="py-10 text-center text-black/60">Loading trading workspace…</div>}>
+        <StartTradingClient />
+      </Suspense>
     </main>
   );
 }
