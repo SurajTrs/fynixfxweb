@@ -152,7 +152,7 @@ function MegaPanel({ config, onMouseEnter, onMouseLeave }: { config: MenuConfig;
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="mega-enter mx-auto w-full max-w-[72rem] rounded-2xl glass-brand text-black ring-1 ring-black/10 ring-brand-soft shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-hidden max-h-[70vh] overflow-auto overscroll-contain">
+      <div className="mega-enter mx-auto w-full max-w-[72rem] rounded-2xl bg-white text-black ring-1 ring-black/10 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-hidden max-h-[70vh] overflow-auto overscroll-contain">
         <div className="grid lg:grid-cols-12 gap-0">
           {/* Promo area */}
           {config.promo && (
