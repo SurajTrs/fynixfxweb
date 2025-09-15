@@ -57,9 +57,15 @@ export default function Footer() {
               liquidity and lightning-fast execution.
             </p>
             <div className="mt-4 flex items-center gap-3 text-white/80">
-              <a href="#" aria-label="X" className="hover:text-brand"><FaXTwitter className="h-5 w-5" /></a>
-              <a href="https://www.instagram.com/fynixfx" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-brand"><FaInstagram className="h-5 w-5" /></a>
-              <a href="#" aria-label="Facebook" className="hover:text-brand"><FaFacebook className="h-5 w-5" /></a>
+              <a href="https://x.com/DMfynixfx" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="hover:text-brand transition-colors">
+                <FaXTwitter className="h-5 w-5" />
+              </a>
+              <a href="https://www.instagram.com/fynixfx" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-brand transition-colors">
+                <FaInstagram className="h-5 w-5" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61580471138070" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-brand transition-colors">
+                <FaFacebook className="h-5 w-5" />
+              </a>
             </div>
           </div>
 

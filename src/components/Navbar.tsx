@@ -39,7 +39,15 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 h-full" onMouseEnter={() => setOpenKey(null)}>
-          <Image src="/logo.png" alt="Fynixfx" width={80} height={80} className="h-full w-auto" priority />
+          <Image 
+            src="/logo.png" 
+            alt="Fynixfx" 
+            width={80} 
+            height={80} 
+            className="h-full w-auto no-scale" 
+            style={{ transform: 'none !important' }}
+            priority 
+          />
           <span className="sr-only">Fynixfx</span>
         </Link>
 
